@@ -1,0 +1,80 @@
+//___________________________
+//HEADER_____________________
+
+
+.header {
+    position: fixed;
+    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 50px;
+    h1 {
+        font-size: 3.3em;
+        animation: zoom 8s;
+    }
+    .toogle {
+        position: relative;
+        width: 50px;
+        height: 50px;
+        cursor: pointer;
+    }
+}
+
+.hamburger {
+    @include position1;
+    @include sizingHam;
+    background-color: #fff;
+    transition: .5s;
+}
+
+.hamburger::before,
+.hamburger::after {
+    content: '';
+    @include position1;
+    @include sizingHam;
+    background-color: #fff;
+    transition: .5s;
+}
+
+.hamburger::before {
+    top: -6px;
+}
+
+.hamburger::after {
+    top: 10px;
+}
+
+.toogle.active .hamburger {
+    background-color: rgba(0,0,0,0)
+}
+
+.toogle.active .hamburger::before, .toogle.active .hamburger::after {
+    @include position2;
+}
+
+.toogle.active .hamburger::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+.toogle.active .hamburger::after {
+    transform: rotate(135deg);
+    top: 0;
+}
+
+.menu {
+    position: absolute;
+    display: block;
+    z-index: 2;
+    height: 200px;
+    top: 45px;
+    right: 100px;
+    text-align: right;
+    line-height: 4em;
+    text-decoration: underline;
+    opacity: 0;
+    transition: 1s;
+    animation-name: slidein;
+    animation-duration: 1s;
+}

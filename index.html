@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" src="https://code.jquery.com/jquery-3.6.0.js" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function (){
+            $('.toogle').click(function(){
+                $('.toogle').toggleClass('active')
+            })
+        })
+        $(document).ready(function (){
+            $(window).scroll(function (){
+                if ($(this).scrollTop() > 400){
+                    $(".vid").css({"opacity" : "0"})
+                }else {
+                    $(".vid").css({"opacity" : "1"})
+                }
+            })
+        })
+    </script>
+    <title>Nixie Tube</title>
+</head>
+
+<body>
+
+    <header>
+        <section class="header">
+            <h1>Nixie Tube Clock</h1>
+
+            <div class="toogle">
+                <div class="hamburger"></div>
+            </div>
+        </section>
+        <nav class="menu">
+            <ul>
+                <li>Nixie Compagnie</li>
+                <li>The Nixie Tube Clock</li>
+                <li>Contact</li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <section>
+        <video class="vid" autoplay="true" loop="true" muted>
+            <source src="./pic/nixie_amfoeg.mp4">
+        </video>
+    </section>
+
+    <main>
+
+        <p class="presentation">Our beautiful Nixie tube clocks brings to your home a piece of history with its durable vintage components. The soft and warm glow of the Nixie tubes makes it perfect to use it in your bedroom without disturbance to your sleep. The stunning colors glow in a properly distributed and beautified manner that gives your room a classy touch.</p>
+    
+        <section class="blockPage">
+
+        </section>
+        <footer>
+            
+        </footer>
+    </main>
+
+    <script src="modal.js"></script>
+</body>
+
+</html>

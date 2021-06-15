@@ -1,0 +1,27 @@
+//__________________________
+//ROOT______________________
+
+body {
+    background-color: #000;
+    line-height: 2em;
+    color: #fff;
+    font-family: 'Viaoda';
+    scroll-behavior: smooth;
+}
+
+
+
+main {
+    position: relative;
+    bottom: 0;
+    right: 0;
+    z-index: 1;
+    overflow: auto;
+    height: 5000px;
+    padding-top: 550px;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+

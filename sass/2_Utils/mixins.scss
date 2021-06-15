@@ -1,0 +1,21 @@
+//_________________________
+//MIXINS___________________
+
+@mixin position1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin position2 {
+    position: absolute;
+    top: 50%;
+    left: 5%;
+    transform: translate(-50%, -50%);
+}
+
+@mixin sizingHam {
+    width: 20px;
+    height: 3px;
+}
